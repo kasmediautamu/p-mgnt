@@ -22,8 +22,11 @@
   "optionalDependencies": {
     "fsevents": "^2.3.2"
   },
-  "engines":{
-    "node":"16.0.0",
-    "npm":"7.18.1"
+  "engines": {
+    "node": "16.0.0",
+    "npm": "7.18.1"
+  },
+  "devDependencies": {
+    "sass": "^1.37.5"
   }
 }

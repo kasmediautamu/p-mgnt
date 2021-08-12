@@ -1,0 +1,13 @@
+@mixin input__text {
+  font-size: 14px;
+  color:$blackish;
+}
+@mixin input__label {
+  font-size: 13px;
+  color:$blackish;
+}
+@mixin button__edge{
+  border-radius:4px;
+  padding:15px;
+
+}

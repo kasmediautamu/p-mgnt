@@ -1,0 +1,51 @@
+@import '../../styles/index.scss';
+.signin{
+  min-height: 100vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $palegrey;
+  .login-form{
+    background-color: $white;
+    padding:30px;
+    border-radius: 6px;
+    min-width: 30%;
+    &__title{
+      color:$blackish;
+      font-size:20px;
+      line-height:28px;
+      padding-bottom:10px;
+    }
+    &__fields{
+      margin-bottom:20px;
+      display:flex;
+      flex-direction: column;
+      input::placeholder{
+        @include input__text;
+      }
+      input[type="text"],input[type="password"]{
+        @extend .form-control;
+        border: 1px solid $tripple_7;
+      }
+      input[type="text"]{
+        @include input__text;
+      }
+      label{
+        @extend .form-label;
+      }
+    }
+    &__btn {
+      @include button__edge;
+      background-color: $blue;
+      color:$white;
+      font-size:16px;
+      line-height: 24px;
+      min-width: 100%;
+      border:none;
+    }
+    .disabled {
+      background-color: $skyish;
+    }
+  }
+}

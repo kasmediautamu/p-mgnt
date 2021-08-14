@@ -1,0 +1,35 @@
+.up-arrow {
+    display: inline-block;
+    position: relative;
+    border: 1px solid #BEBEBE;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 50px;
+}
+.up-arrow:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-bottom-color: #BEBEBE;
+}
+
+.up-arrow:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-bottom-color: #FFF;
+}
+.show{
+  display:none;
+}

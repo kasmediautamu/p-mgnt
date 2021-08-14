@@ -1,6 +1,7 @@
 import React from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import './styles.scss';
+import { ReactComponent as DownArrowIcon } from '../../../assets/downarrow.svg'
 
 export interface DropdownSelectProps {
   value: string;
@@ -27,7 +28,8 @@ const DropdownSelect: React.FunctionComponent<DropdownSelectProps> = (
     <Dropdown className={`dropdown-select ${classNameContainer || ''}`}>
       <Dropdown.Toggle variant="outline">
         <div className="toggle-label">{value || ''}</div>
-        <span />
+        {/* <span /> */}
+        <DownArrowIcon/>
       </Dropdown.Toggle>
       <Dropdown.Menu>
         {items.map((item, index) => (

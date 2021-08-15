@@ -4,6 +4,7 @@ import auth from '../../auth/auth-helper'
 import Side from '../../components/header/Side'
 import Top from '../../components/header/Top'
 import NewView from '../../components/newview'
+import CreateView from '../../components/newview/CreateView'
 import './styles.scss'
 
 const Home = () => {
@@ -21,7 +22,7 @@ const Home = () => {
       </div>
       <div className="right">
         <Top onSetView={setView} activeView={view} />
-        {view === 'relaxed' && <NewView />}
+        {view === 'relaxed' && <CreateView />}
         {view === 'stretched' && <NewView />}
       </div>
     </div>

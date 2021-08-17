@@ -11,7 +11,7 @@ const Tooltip =(props:IProps)=>{
 
   return (
     <OutsideClickHandler onOutsideClick={() => setShow('visible')}>
-    <div className={`up-arrow ${customclass} ${hide==='visible' ? 'show' :''}`}>
+    <div className={`up-arrow ${customclass} ${hide==='visible' ? 'showToolTip' :''}`}>
       {children}
     </div>
     </OutsideClickHandler>

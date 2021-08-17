@@ -1,0 +1,69 @@
+@import '../../../styles//index.scss';
+.view-form{
+  padding: 0px 5px 10px 5px;
+  display:flex;
+  flex-direction: column;
+  &__description{
+    font-size: 14px;
+    font-family: $Inter-Medium;
+    line-height: 28px;
+    color:$blackish;
+  }
+  &__group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    &--last{
+      margin-left: auto;
+      p{
+        padding-right:20px;
+        font-size: 16px;
+        color:$blue;
+        line-height:24px;
+        font-family: $Inter-Medium;
+        cursor: pointer;
+      }
+      .create-view{
+        color:$white;
+        font-size: 16px;
+        font-family: $Inter-Regular;
+        line-height: 24px;
+        border:1px solid $borderbrown;
+        background-color: $blue;
+        border-radius: 4px;
+        padding:5px 10px 5px 30px;
+        cursor: pointer;
+      }
+      .disabled {
+        background-color: $skyish;
+        border:1px solid $skyish;
+      }
+    }
+    label{
+      font-size: 13px;
+      font-family: $Inter-Regular;
+      line-height: 20px;
+      color:$dirtyblue;
+      white-space: nowrap;
+    }
+    textarea,input[type="text"]{
+      border-radius: 4px;
+      border:1px solid $borderC4;
+      flex-basis:70%;
+      padding:5px;
+      font-size:13px;
+      font-family: $Inter-Regular;
+      line-height: 20px;
+      color:$dirtyblue;
+    }
+    .dropdown-select{
+      flex-basis: 70%;
+    }
+    textarea{
+      resize:none;
+      outline:none;
+    }
+  }
+}

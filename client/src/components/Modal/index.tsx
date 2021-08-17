@@ -37,7 +37,7 @@ const BaseModal = (props: IBaseModal) => {
           <img src={_close} alt="" onClick={handleClose} />
         </Modal.Header>
         <Modal.Body>{children}</Modal.Body>
-        <Modal.Footer>
+        {/* <Modal.Footer>
           <a
             href="javascript:void(0)"
             className={anchorClass}
@@ -45,7 +45,7 @@ const BaseModal = (props: IBaseModal) => {
           >
             {btnlabel}
           </a>
-        </Modal.Footer>
+        </Modal.Footer> */}
       </Modal>
     </>
   );

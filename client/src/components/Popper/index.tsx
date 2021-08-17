@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { usePopperTooltip } from 'react-popper-tooltip';
-import 'react-popper-tooltip/dist/styles.css';
+// import 'react-popper-tooltip/dist/styles.css';
 
 function Popper() {
   const [controlledVisible, setControlledVisible] = React.useState(false);

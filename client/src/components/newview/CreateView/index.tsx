@@ -26,7 +26,8 @@ const initialViewState: IProps = {
   useThisAsDefaultView: false,
 }
 
-const CreateView = () => {
+const CreateView = (props: any) => {
+  const { cancelModal } = props
   const [viewData, setViewData] = useState(initialViewState)
   const [defaultView, setDefaultView] = useState<boolean | null>(false)
   const [Auditor, setAuditor] = useState<string>('')
@@ -54,12 +55,7 @@ const CreateView = () => {
   const isEnableCreate = (): boolean => {
     return (
       viewname !== '' &&
-      description !== '' &&
-      auditor !== '' &&
-      followUp !== '' &&
-      status !== '' &&
-      accountAge !== '' &&
-      hiddenRecords !== ''
+      description !== ''
     )
   }
   //submit view
@@ -76,7 +72,7 @@ const CreateView = () => {
   return (
     <form className="view-form">
       <div className="view-form__description">View Description</div>
-      <div className="view-form__fields">
+      <div className="view-form__group">
         <label htmlFor="viewname">View Name</label>
         <Input
           type="text"
@@ -146,13 +142,20 @@ const CreateView = () => {
         <CheckBox />
         <label htmlFor="defaulview">Use this as my default view</label>
       </div>
-      <div className="view-form__group">
-        <p className="view-form__close-btn">Cancel</p>
-        <Button type="submit" btnclass="view-form__btn">Create View</Button>
-
+      <div className="view-form__group view-form__group--last">
+        <p className="view-form__close-btn" onClick={cancelModal}>
+          Cancel
+        </p>
+        <div
+          className={`create-view ${isEnableCreate() ? '' : 'disabled'}`}
+          onClick={() => console.log('view created')}
+        >
+          Create View
+        </div>
       </div>
     </form>
   )
 }
 
 export default CreateView
+

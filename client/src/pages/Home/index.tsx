@@ -5,6 +5,8 @@ import Side from '../../components/header/Side'
 import Top from '../../components/header/Top'
 import NewView from '../../components/newview'
 import CreateView from '../../components/newview/CreateView'
+import ViewAdministration from '../../components/ViewAdministration'
+import WorkList from '../../components/worklist'
 import './styles.scss'
 
 const Home = () => {
@@ -22,8 +24,8 @@ const Home = () => {
       </div>
       <div className="right">
         <Top onSetView={setView} activeView={view} />
-        {view === 'relaxed' && <CreateView />}
-        {view === 'stretched' && <NewView />}
+        {view === 'relaxed' && <NewView />}
+        {view === 'stretched' && <WorkList />}
       </div>
     </div>
   )

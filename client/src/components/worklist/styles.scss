@@ -1,0 +1,75 @@
+@import '../../styles/index.scss';
+.worklist {
+  // background-color: $bgF7;
+  &__table{
+    margin:15px;
+  }
+  &__details{
+    margin:15px;
+  }
+  &__details,&__table{
+    background-color: $white;
+    width:100%;
+    border: 1px solid $borderE8;
+    border-radius: 6px;
+    padding:10px;
+    border-collapse: collapse;
+    border-style: hidden; /* hide standard table (collapsed) border */
+    box-shadow: 0px 1px 4px 0px rgba(21,34,50,0.4);/* this draws the table border  */
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(21,34,50,0.4);
+    -moz-box-shadow: 0px 1px 4px 0px rgba(21,34,50,0.4);
+    thead{
+      th{
+        font-size: 13px;
+        font-family: $Inter-SemiBold;
+        color:$logblue;
+        border: 1px solid $borderE8;
+        padding:8px;
+        white-space: nowrap;
+      }
+      th:first-child{
+        border-left: none;
+      }
+      th:last-child{
+        border-right: none;
+      }
+    }
+    tbody{
+      tr:nth-child(even){
+        background-color: $bgF0F;
+      }
+
+      tr:hover {
+        background-color:rgb(250,164,31,18%);
+        cursor: pointer;
+      }
+      tr {
+        td{
+          font-size: 12px;
+          font-family: $Inter-Regular;
+          color:$darkbrown;
+          border: 1px solid $borderE8;
+          padding:8px;
+          white-space: nowrap;
+        }
+        td:nth-of-type(10),td:last-child{
+          text-align: right;
+        }
+      }
+    }
+    tfoot{
+      td{
+        font-size: 12px;
+        font-family: $Inter-Regular;
+        color:$darkbrown;
+        border: 1px solid $borderE8;
+        padding:8px;
+        white-space: nowrap;
+      }
+      td:nth-of-type(10),td:last-child{
+        text-align: right;
+      }
+    }
+
+  }
+}
